@@ -1,0 +1,83 @@
+{
+    "name": "sparkle",
+    "type": 1,
+    "description": "Create *sparkly* images from text",
+    "options": [
+        {
+            "name": "prompt",
+            "description": "Description of the image to be generated. Required.",
+            "type": 3,
+            "required": "True"
+        },
+        {
+            "name": "seed",
+            "description": "The seed to use for the computation. Use the same seed to get the same image. Default is random.",
+            "type": 4,
+            "required": "False"
+        },
+        {
+            "name": "steps",
+            "description": "The number of iterations to complete. Higher number takes longer. Default is 16.",
+            "type": 4,
+            "required": "False",
+            "choices": [
+                {
+                    "name": "8",
+                    "value": 8
+                },
+                {
+                    "name": "16",
+                    "value": 16
+                },
+                {
+                    "name": "32",
+                    "value": 32
+                },
+                {
+                    "name": "64",
+                    "value": 64
+                }
+            ]
+        },
+        {
+            "name": "sampler",
+            "description": "Samplers change how your image is processed. Default is lms",
+            "type": 3,
+            "required": "False",
+            "choices": [
+                {
+                    "name": "k_lms",
+                    "value": "k_lms"
+                },
+                {
+                    "name": "k_euler_a",
+                    "value": "k_euler_a"
+                },
+                {
+                    "name": "PLMS",
+                    "value": "PLMS"
+                },
+                {
+                    "name": "DDIM",
+                    "value": "DDIM"
+                },
+                {
+                    "name": "k_dpm_2_a",
+                    "value": "k_dpm_2_a"
+                },
+                {
+                    "name": "k_dpm_2",
+                    "value": "k_dpm_2"
+                },
+                {
+                    "name": "k_euler",
+                    "value": "k_euler"
+                },
+                {
+                    "name": "k_heun",
+                    "value": "k_heun"
+                }
+            ]
+        }
+    ]
+}
