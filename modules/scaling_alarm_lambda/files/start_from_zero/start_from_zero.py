@@ -30,7 +30,7 @@ def lambda_handler(event, context):
     asg_desired_capacity = response["AutoScalingGroups"][0]['DesiredCapacity']
 
     # First message and asg has no capacity. 
-    if int(message_count) == 1 and asg_desired_capacity == 0:
+    if int(message_count) > 0 and asg_desired_capacity == 0:
         # Starting from Zero is true!
         response = client.set_desired_capacity(
             AutoScalingGroupName=AUTOSCALING_GROUP,
